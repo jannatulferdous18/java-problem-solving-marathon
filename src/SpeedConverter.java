@@ -1,7 +1,7 @@
 public class SpeedConverter {
 
     public static long toMilesPerHour(double kilometersPerHour){
-       return (long) (kilometersPerHour < 0 ? -1 : Math.round((kilometersPerHour / 1.609)));
+       return kilometersPerHour < 0 ? -1 : Math.round((kilometersPerHour / 1.609));
     }
 
     public static void printConversion(double kilometersPerHour){
@@ -11,7 +11,7 @@ public class SpeedConverter {
 
     // covert kilometer/hr to miles/hr
     public static void main(String[] args) {
-        //printConversion(toMilesPerHour(25.42));
-        printConversion(toMilesPerHour(-5.6));
+        printConversion(toMilesPerHour(25.42));
+        //printConversion(toMilesPerHour(-5.6));
     }
 }
